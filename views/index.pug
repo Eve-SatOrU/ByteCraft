@@ -1,20 +1,90 @@
-doctype html
-html
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Online Hex Editor
-    style.
-      textarea {
-        width: 100%;
-        height: 200px;
-      }
-body
-    textarea#textInput(placeholder="Enter text...")
-    div
-        h3 Hexadecimal Representation:
-        pre#hexOutput
-    div
-        h3 ASCII Representation:
-        pre#asciiOutput
+//- doctype html
+//- html
+//-   head
+//-     meta(charset="UTF-8")
+//-     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-     title Online Hex Editor
+//-     style.
+//-       textarea {
+//-         width: 100%;
+//-         height: 200px;
+//-       }
+//- body
+//-     textarea#textInput(placeholder="Enter text...")
+//-     div
+//-         h3 Hexadecimal Representation:
+//-         pre#hexOutput
+//-     div
+//-         h3 ASCII Representation:
+//-         pre#asciiOutput
+//- script(src="/js/script.js")
+
+
+meta(charset="UTF-8")
+meta(name="description", content="Hex editor for EEPROM dump editing. Main purpose of this application is editing and analyzing small binary files, mostly eeprom dumps.You can open, save, compare, analyse, decode binary data.")
+meta(name="keywords", content="hex editor compare dump eeprom automotive")
+title Online Hex editor tool
+link(href="css/bootstrap.min.css", rel="stylesheet")
+link(rel="stylesheet", href="/css/styles.css")
+//- link(rel="stylesheet", href="/css/tree.css")
+//- meta(name="viewport", content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1")
+meta(name="fragment", content="!")
+meta(name="msvalidate.01", content="13C83813E5190CE939564B8FB4C9A99D")
+base(href="/")
+//- the start of nav bar
+.nav1
+//- nav
+  div
+    .navbar-header
+      //- button
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a()
+    #navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          a(href="javascript:;", title="Upload file from local computer")
+            label.uploadfile
+              span.cloud-upload.white(aria-hidden="true")
+              file
+              | {{locale.open}}
+
+        li
+          a(href, ng-click="saveFile()", title="Save file to local disk")
+            span.download.white(aria-hidden="true")
+            |   {{locale.save}}
+        li
+          a#navbar_copy.clip_button(data-clipboard-text="Copy22 Me!", title="Copy current buffer to clipboard entirely")
+            span.zmdi-content-content-copy.white(aria-hidden="true")
+            | {{locale.copyclip}}
+            span.foontpeek .
+        li
+          a(href, onclick="$(\'#myModal\').modal()")
+            span.zmdi-action-info-outline.white(aria-hidden="true")
+            |   {{locale.information}}
+//- the end of the nav bar
+
+//- the start of body
+.center23
+.bodycont.container
+  //- textarea#textInput(placeholder="Enter text...")
+  .tabset(role="tabpanel")
+    .tab-content.well
+      textarea#textInput(placeholder="Enter text...")
+  .inspector
+
+    //- the tab content 
+    .calc.well(heading="Script", is-open="1")
+      h3.desgin Hexadecimal Representation:
+      #details.collapse.in
+      pre#hexOutput
+      //- the input of the third input nta3 script
+    .calc.well(heading="Script", is-open="1")
+      h3 ASCII Representation:
+      pre#asciiOutput
+    .calc.well(heading="Script", is-open="1")
+      h3 BINARY Representation:
+      pre#binaryOutput      
 script(src="/js/script.js")
