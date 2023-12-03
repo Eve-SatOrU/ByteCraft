@@ -28,9 +28,12 @@ can customize it according to the specific details of your project: -->
 # ByteCraft
 <!-- logo -->
 <p align="center">
-  <img src="./public/images/bytecraft1.png" align="center" width="200">
+<img src="./public/images/bytecraft1.png" align="center" width="200">
 </p>
-
+<!-- live demo -->
+<h3 align="center">
+  <a href="https://bytecraft.onrender.com/">Live Demo</a>
+</h3>
 Online Hex Viewer is a web-based tool that allows users to upload files and view their hexadecimal and ASCII representations. It's built using Node.js, Express, and Pug.
 
 ## Features
