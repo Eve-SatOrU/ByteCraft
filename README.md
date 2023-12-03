@@ -1,4 +1,4 @@
-# ByteCraft
+<!-- # ByteCraft
 ## features 
 
 - [1] Syntax Highlighting:
@@ -23,5 +23,67 @@ Optimize the code for better performance, especially if dealing with large files
 Include undo and redo functionality for user edits.
 - [**not must do it**] File Upload :Allow users to upload binary files for editing.
 
+can customize it according to the specific details of your project: -->
 
+# ByteCraft
+<!-- logo -->
+<p align="center">
+  <img src="./public/images/bytecraft1.png" align="center" width="200">
+</p>
 
+Online Hex Viewer is a web-based tool that allows users to upload files and view their hexadecimal and ASCII representations. It's built using Node.js, Express, and Pug.
+
+## Features
+
+- Upload and view the hexadecimal and ASCII representations of files.
+- Supports various file types, including text files, images, and PDFs.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed on your machine
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Eve-SatOrU/ByteCraft.git
+2. Navigate to the project directory:
+    ```
+    cd bytecraft
+    ```
+3. Install dependencies:
+
+    ```
+    npm install
+    ```
+## Usage
+1. Start the application:
+    
+    ```
+    npm start
+    ```
+2. Open your browser and go to http://localhost:3000.
+
+3. Upload a file using the provided form and view its hexadecimal and ASCII representations.
+
+## Project Structure
+* views/: Pug templates for the views.
+* public/: Static files (CSS, images, JavaScript).
+* routes/: Express route handlers.
+* app.js: Main application file.
+* controllers/: Controllers for handling file uploads and errors.
+## Dependencies
+Express: Web application framework for Node.js.
+Pug: Template engine for Node.js.
+Multer: Middleware for handling multipart/form-data, used for file uploads.
+## Contributing
+If you'd like to contribute to this project, please follow these guidelines:
+
+Fork the repository.
+1. Create a new branch for your feature or bug fix.
+2. Make your changes and submit a pull request.
+## License
+This project is licensed under the MIT License.
