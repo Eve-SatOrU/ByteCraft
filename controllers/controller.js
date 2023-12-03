@@ -8,12 +8,10 @@ exports.getindex=(req, res, next) => {
 exports.postUpdate =(req, res, next) => {
   const inputText = req.body;
   const hexRepresentation = Buffer.from(inputText, 'utf-8').toString('hex');
-  const asciiRepresentation = Buffer.from(inputText, 'utf-8').toString('ascii');
   const binaryRepresentation = Array.from(Buffer.from(inputText, 'utf-8')).map(byte => byte.toString(2).padStart(8, '0')).join(' ');
 
   res.json({
     hex: hexRepresentation,
-    ascii: asciiRepresentation,
     binary: binaryRepresentation,
   });
 };

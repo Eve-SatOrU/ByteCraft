@@ -7,14 +7,17 @@ html
     title Online Hex Viewer
   body
     nav.navbar
-      img.logo(src="/images/bytecraft1.png", alt="Logo")
+      //- img.logo(src="/images/bytecraft1.png", alt="Logo")
+        a(href="/") 
+      a(href="/")
+        img.logo(src="/images/bytecraft1.png", alt="Logo")
       ul.nav-links
         li.nav-item
-          a(href="/upload") Home
+          a(href="/") Home
         li.nav-item
           a(href="https://github.com/Eve-SatOrU/ByteCraft") Documentation
         li.nav-item
-          a(href="/") Convert
+          a(href="/upload") Upload
         li.nav-item
           a(href="/contact") Contact
     .container
@@ -23,6 +26,6 @@ html
           h3 Hexadecimal Representation:
           pre#hexOutput
       div
-          h3 ASCII Representation:
-          pre#asciiOutput
+          h3 Binary Representation:
+          pre#binaryOutput
 script(src="/js/script.js")

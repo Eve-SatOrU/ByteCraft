@@ -15,6 +15,8 @@ const upload = multer({ storage: storage });
 // routes
 const routes = require('./routes/routes');
 app.use('/', routes);
+const errorController = require('./controllers/error.js');
+app.use(errorController.get404);
 // controllers
 const controller = require('./controllers/controller');
 
